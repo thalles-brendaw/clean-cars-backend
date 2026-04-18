@@ -150,14 +150,14 @@ export async function handleIncomingText(from, text) {
   const msg = (text || "").trim().toLowerCase();
 
   if (
-    msg === "oi" ||
-    msg === "ola" ||
-    msg === "olá" ||
-    msg === "menu" ||
-    msg === "bom dia" ||
-    msg === "boa tarde" ||
-    msg === "boa noite"
-  ) {
+  msg.includes("oi") ||
+  msg.includes("ola") ||
+  msg.includes("olá") ||
+  msg.includes("menu") ||
+  msg.includes("bom dia") ||
+  msg.includes("boa tarde") ||
+  msg.includes("boa noite")
+) {
     return sendMainMenu(from);
   }
 

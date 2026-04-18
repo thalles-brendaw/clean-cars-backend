@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 3000;
 const VERIFY_TOKEN = process.env.WHATSAPP_VERIFY_TOKEN;
 
 app.get("/", (req, res) => {
-  res.send("Servidor WhatsApp funcionando");
+  res.status(200).send("Servidor WhatsApp funcionando");
 });
 
 app.get("/webhook", (req, res) => {
